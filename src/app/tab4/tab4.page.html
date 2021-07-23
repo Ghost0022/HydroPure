@@ -1,0 +1,28 @@
+<ion-header>  
+  <ion-toolbar color="light">  
+    <ion-buttons slot="start">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>  
+    <ion-img class="logo" src="assets/img/logo.png"></ion-img>  
+  </ion-toolbar>   
+</ion-header> 
+
+<ion-content>
+  <ion-card class="description">
+    <ion-card-content class="description">
+      <ion-img [ngStyle]="{'height': '150px'}" src="assets/img/logo.png"></ion-img>
+      HydroPure is an application for paying water bills. It was established on January 2021. This is handled by the water district of San Jose, Batangas
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card >
+  <ion-card-header>
+    <ion-card-title>Development Team</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="team" *ngFor = "let member of team"> 
+  <ion-label>{{member.name+ " " + member.number}}</ion-label><br>
+  <ion-label>{{ member.email}}</ion-label>
+</ion-card-content>
+</ion-card>
+  
+</ion-content>

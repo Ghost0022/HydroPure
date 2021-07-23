@@ -1,0 +1,38 @@
+ion-img{
+    margin-left: 80%;
+    width:50px;
+    height: 50px;
+    
+}
+ion-card-title{
+  font-weight: 600;
+}
+ion-content {
+    --background: url(../../assets/img/blue.jpg) no-repeat center/cover fixed;
+  }
+  /* DOES NOT WORK - not specific enough */
+.alert-wrapper {
+    background: #e5e5e5;
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class .alert-wrapper {
+    background: #e5e5e5;
+  }
+  ion-card{
+    border-radius: 12px;
+  }
+  .item-inner {
+    flex-direction: row-reverse !important;
+  }
+  ion-label{
+    
+    font-size: medium;
+  }
+  .icon{
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  .pay{
+    padding-left: 20px;
+  }

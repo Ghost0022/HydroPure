@@ -1,0 +1,40 @@
+<ion-header>  
+  <ion-toolbar color="light"> 
+    <ion-img src="assets/img/logo.png"></ion-img>
+    <ion-buttons slot="start">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>  
+  </ion-toolbar>   
+</ion-header> 
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="location">
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label >Main Office</ion-label>
+      <ion-button fill="outline" slot="end" (click)="page()" >View</ion-button>
+
+    </ion-item>
+  </ion-card>
+
+  <ion-card >
+    <img src="assets/img/banner.jpg">
+    <ion-card-content *ngFor="let info of announcement">
+      {{info.title + " " + info.description}}
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <ion-card class="slider-container">
+    <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="true">
+      <ion-slide *ngFor="let slide of slidesData">
+        <img src="{{slide.image}}" class="slide-image" />
+        
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+    
+</ion-content>
+

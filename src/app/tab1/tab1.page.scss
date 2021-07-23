@@ -1,0 +1,35 @@
+ion-img{
+    margin-left: 80%;
+    width:50px;
+    height: 50px;
+    
+}
+
+ion-content {
+    --background: url(../../assets/img/blue.jpg) no-repeat center/cover fixed;
+  }
+ion-card{
+  width: 95%;
+    box-shadow: none;
+    border-radius: 12px;
+}
+
+ion-slides {
+    --bullet-background: blue;
+    --bullet-background-active:green;
+  }
+  .slider-container {
+    width: 95%;
+    height: 350px;
+    box-shadow: none;
+    border-radius: 12px;
+    
+    img {
+        width: 95%;
+        height: 350px;
+    }
+}
+
+ 
+
+

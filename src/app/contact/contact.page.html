@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-img src="assets/img/logo.png"></ion-img>
+    <ion-buttons slot="start">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="3" size-md="4" size-sm="6" size="12" *ngFor="let logo of media; let i=index;">
+          <ion-card>
+            <img src="{{logo.image}}" alt="{{logo.title}}"/>
+            <ion-card-header>
+              <ion-card-subtitle>{{logo.title}}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

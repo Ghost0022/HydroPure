@@ -1,0 +1,62 @@
+
+<ion-header>  
+  <ion-toolbar color="light">  
+    <ion-buttons slot="start">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>  
+    <ion-img src="assets/img/logo.png"></ion-img>  
+  </ion-toolbar>   
+</ion-header> 
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="payment">
+    <ion-card-content class="payment">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">STATEMENT OF ACCOUNT</ion-card-title>
+      </ion-card-header>
+
+
+<ion-label>Meter ID: M-12345</ion-label><br>
+<ion-label>Name: Juan Dela Cruz</ion-label><br>
+<ion-label>Address: Purok 5, Natunuan San Jose, Batangas</ion-label><br>
+<ion-label>Bill Period: June 15, 2021- July 15, 2021</ion-label><br>
+<ion-label>Previous Reading: 120</ion-label><br>
+<ion-label>Current Reading: 135</ion-label><br>
+<ion-label>Usage: 15</ion-label><br>
+<ion-label>Amount: P300</ion-label>
+
+</ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-content>
+
+<ion-item >
+  <ion-icon name="mail"></ion-icon>
+  <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>
+  </ion-item>
+ 
+<ion-item >
+ <ion-icon name="add"></ion-icon>
+<ion-input placeholder="Meter ID"></ion-input>
+</ion-item><br>
+<ion-icon  class="icon" name="wallet"></ion-icon>
+<ion-label>Payment Method:</ion-label>  
+
+<ion-list lines="none">
+  <ion-item>
+    <ion-label class="pay" color="primary">Gcash</ion-label>
+    <ion-toggle color="primary" ></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="pay" color="success" >Paymaya</ion-label>
+    <ion-toggle color="success"  ></ion-toggle>
+  </ion-item>
+</ion-list>    
+
+        <ion-button expand="block"(click)="Submit()"  routerLink="/tabs/tab1">Submit Payment</ion-button>
+      </ion-card-content>
+  </ion-card>
+</ion-content>
